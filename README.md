@@ -32,7 +32,10 @@ Docker instalado
 
 ```bash
 # 1. Clonar o projeto (inclui backend e frontend)
-git clone git@github.com:GabrielSilva09/Task-Manager-Manole.git Task-Manager
+git clone git@github.com:GabrielSilva09/Task-Manager.git Task-Manager
+# ou clone com o HTTPS
+git clone https://github.com/GabrielSilva09/Task-Manager.git Task-Manager
+# então abra a pasta clonada
 cd Task-Manager
 
 # 2. Rodar o docker e aguardar a inicialização dos serviços

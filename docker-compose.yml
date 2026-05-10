@@ -1,0 +1,45 @@
+services:
+  # 1. Banco de Dados PostgreSQL
+  db:
+    image: postgres:15-alpine
+    container_name: task_manager_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+      POSTGRES_DB: task_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # 2. API Node.js (Backend)
+  backend:
+    build: ./backend
+    container_name: task_manager_backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://admin:adminpassword@db:5432/task_db?schema=public
+      - PORT=3000
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  # 3. Interface React (Frontend)
+  frontend:
+    build: ./frontend
+    container_name: task_manager_frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:3000
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+volumes:
+  pgdata:

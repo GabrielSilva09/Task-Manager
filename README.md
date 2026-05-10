@@ -90,9 +90,9 @@ Para uma versão de produção, a ideia é:
 
 - Variáveis de Ambiente: Configuração de VITE_API_URL no front e DATABASE_URL no back para isolar os ambientes de desenvolvimento e produção.
 
-  Atualmente o projeto está rodando online nas seguintes URLs:
+##  Atualmente o projeto está rodando online nas seguintes URLs:
 
-###    Frontend funcional:       <a href="https://task-manager-red-seven-63.vercel.app/">https://task-manager-red-seven-63.vercel.app/</>
+###    Frontend funcional:       <a href="https://task-manager-red-seven-63.vercel.app/">https://task-manager-red-seven-63.vercel.app/</a>
 ###    API:                      https://task-manager-manole.onrender.com
 ###    PostgreSQL:               dpg-d8071k9j2pic73f2k870-a.oregon-postgres.render.com:5432
 

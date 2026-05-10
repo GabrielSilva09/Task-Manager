@@ -81,7 +81,7 @@ O projeto foi dividido em três camadas principais para garantir a separação d
 
 - CSS Grid & Flexbox: Optei por CSS puro com metodologias modernas para garantir uma interface responsiva sem a necessidade de bibliotecas pesadas de terceiros.
 
-# Estratégia de Deploy
+# Estratégia de Deploy como extra (parte 5)
 Para uma versão de produção, a ideia é:
 
 - Frontend: Deploy na Vercel ou Netlify (otimizados para SPAs).
@@ -89,6 +89,12 @@ Para uma versão de produção, a ideia é:
 - Backend & DB: Deploy na Render ou Railway utilizando containers Docker.
 
 - Variáveis de Ambiente: Configuração de VITE_API_URL no front e DATABASE_URL no back para isolar os ambientes de desenvolvimento e produção.
+
+  Atualmente o projeto está rodando online nas seguintes URLs:
+
+###    Frontend funcional:       <a href="https://task-manager-red-seven-63.vercel.app/">https://task-manager-red-seven-63.vercel.app/</>
+###    API:                      https://task-manager-manole.onrender.com
+###    PostgreSQL:               dpg-d8071k9j2pic73f2k870-a.oregon-postgres.render.com:5432
 
 # Pontos Fortes e Limitações
 ## Pontos Fortes
